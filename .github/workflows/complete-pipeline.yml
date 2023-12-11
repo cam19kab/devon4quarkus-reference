@@ -1,4 +1,5 @@
-name: quarkus-complete
+name: quarkus-c
+
 
 on:
   workflow_call:
