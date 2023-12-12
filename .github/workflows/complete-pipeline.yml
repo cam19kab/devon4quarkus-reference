@@ -1,6 +1,4 @@
-name: quarkus-c
-
-
+name: qpipeline
 on:
   workflow_call:
   workflow_dispatch:
@@ -45,10 +43,12 @@ jobs:
           name: BuildOutput
           path: ./BuildOutput.tar
 
-  Test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
+
+#   Test:
+#     name: Test
+#     runs-on: ubuntu-latest
+#     steps:
+
       - name: Checkout repository code
         uses: actions/checkout@v2
 
@@ -61,10 +61,8 @@ jobs:
         with:
           files: '**/TEST-*.xml'
   
-  Quality:
-    name: SonarQube analysis
-    runs-on: ubuntu-latest   
-    steps:
+
+
       - name: Checkout the repository
         uses: actions/checkout@v2
 
