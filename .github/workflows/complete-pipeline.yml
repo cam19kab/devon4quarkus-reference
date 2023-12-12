@@ -1,4 +1,4 @@
-name: qpipeline
+name: quarkus-pipeline
 on:
   workflow_call:
   workflow_dispatch:
@@ -62,9 +62,13 @@ jobs:
           files: '**/TEST-*.xml'
   
 
+  # Quality:
+  #   name: SonarQube analysis
+  #   runs-on: ubuntu-latest   
+  #   steps:
+      # - name: Checkout the repository
+      #   uses: actions/checkout@v2
 
-      - name: Checkout the repository
-        uses: actions/checkout@v2
 
       - name: SonarQube analysis
         run: .github/workflows/scripts/quality.sh.template
